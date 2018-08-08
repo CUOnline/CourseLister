@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "name": "courselister",
+  "private": true,
+  "devDependencies": {
+    "@types/jquery": "3.3.5",
+    "axios": "0.18.0",
+    "bootstrap": "4.1.1",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^5.0.0-alpha.2",
+    "jquery": "3.3.1",
+    "lodash": "4.17.10",
+    "merge-stream": "1.0.1",
+    "popper.js": "1.14.3",
+    "typescript": "2.9.2",
+    "vee-validate": "2.0.9",
+    "vue": "2.5.16"
+  },
+  "dependencies": {},
+  "-vs-binding": {
+    "BeforeBuild": [
+      "install"
+    ]
+  }
+}

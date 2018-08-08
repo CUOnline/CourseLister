@@ -1,0 +1,44 @@
+﻿@model CourseLister.Models.HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<img id="logo" src="~/images/cu-online.png" />
+<div id="app">
+    <div id="content">
+
+        <h2>Course Lister</h2>
+        <a href="webUrl" target="_blank">https://ucdenver.instructure.com</a>
+        <br />
+        The Course Lister is an app that will generate a CSV file of courses listed under a specific account.
+        <form asp-controller="Home" asp-action="ExternalLogout" method="post" style="float:right">
+            <button type="submit">Log Out</button>
+        </form>
+        <hr />
+
+        @if (Model.Authorized)
+        {
+            <span class="text-danger">{{errorText}}</span>
+            <div class="form-group">
+                <label for="accountId">Canvas Account Id</label>
+                <input id="accountId" v-model="canvasAccountId" class="form-control" v-on:keyup.enter="generateCourseCSV" />
+            </div>
+            <div class="form-group">
+                <label for="query">Canvas Query</label>
+                <input id="query" v-model="query" class="form-control" v-on:keyup.enter="generateCourseCSV"/>
+            </div>
+            <input type="button" v-on:click="generateCourseCSV" value="Submit" class="btn btn-primary" />
+        }
+        else
+        {
+            <span>You do not have the proper roles to use this tool.</span>
+        }
+    </div>
+</div>
+
+<script type="text/javascript">
+    //window.webApiUrl = '@Html.Raw(Model.BaseCanvasUrl)';
+    window.authorized = '@Html.Raw(Model.Authorized)';
+
+</script>
+<script type="text/javascript" src="~/js/index.js"></script>
