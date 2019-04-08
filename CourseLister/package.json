@@ -11,12 +11,14 @@
     "jquery": "3.3.1",
     "lodash": "4.17.10",
     "merge-stream": "1.0.1",
+    "natives": "^1.1.6",
     "popper.js": "1.14.3",
     "typescript": "2.9.2",
     "vee-validate": "2.0.9",
     "vue": "2.5.16"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "-vs-binding": {
     "BeforeBuild": [
       "install"

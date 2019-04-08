@@ -14,7 +14,7 @@ namespace CourseLister.Controllers
 {
 
     // derive from authorize attribute.
-    [Authorize(Roles = RoleNames.AccountAdmin + "," + RoleNames.HelpDesk)]
+    [Authorize(Roles = RoleNames.AccountAdmin + "," + RoleNames.ServiceDesk)]
     public class CanvasController : Controller
     {
         private readonly HttpClient canvasClient;
