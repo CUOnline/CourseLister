@@ -1,4 +1,6 @@
-appsettings.*
+appsettings.Development.json
+appsettings.Staging.json
+appsettings.Production.json
 node_modules/
 **/wwwroot/lib
 
